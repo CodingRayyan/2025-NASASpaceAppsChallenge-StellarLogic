@@ -8,6 +8,11 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import requests
 import json
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # ✅ loads variables from .env
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 # -------------------- ENHANCED CUSTOM CSS STYLING --------------------
 st.markdown("""
@@ -928,4 +933,5 @@ st.markdown("""
     </div>
     <div>Developed with ❤️ by <b>StellarLogic</b> for NASA Space Apps Challenge 2025</div>
 </div>
+
 """, unsafe_allow_html=True)
